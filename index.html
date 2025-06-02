@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,54 +7,48 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Portfólio Acadêmico</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html" class="active">Home</a></li>
-                    <li><a href="disciplinas.html">Disciplinas</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                    <li><a href="https://github.com/zun666" target="_blank" class="github-btn">GitHub</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Meu Portfólio</a>
+            <ul class="nav-list">
+                <li><a href="disciplinas.html">Disciplinas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="https://github.com/zun666" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section class="banner">
-            <h2>Bem-vindo ao meu portfólio acadêmico</h2>
-            <p>Aqui você encontra todos os projetos e aprendizados das disciplinas do meu curso.</p>
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1>Bem-vindo ao Meu Portfólio Acadêmico</h1>
+                <p>Olá! Meu nome é Felipe Pacheco Bianchini e sou estudante de Análise e Desenvolvimento de Sistemas na Fatec Jales. Este portfólio foi criado para apresentar os projetos, conhecimentos e curiosidades que venho adquirindo ao longo da minha jornada acadêmica, explorando as diversas áreas da tecnologia da informação.</p>
+                <p>Aqui você encontrará um resumo das disciplinas que cursei, os principais tópicos abordados, e uma seção dedicada aos meus projetos desenvolvidos no GitHub. Sinta-se à vontade para explorar!</p>
+                <a href="disciplinas.html" class="btn btn-primary">Explorar Disciplinas</a>
+            </div>
         </section>
 
-        <section class="destaques">
-            <h2>Destaques</h2>
-            <div class="grid">
-                <article class="card">
-                    <h3>Projeto Integrador</h3>
-                    <p>Projeto interdisciplinar desenvolvido durante o semestre.</p>
-                    <a href="disciplinas/alu21.html" class="btn">Ver projeto</a>
-                </article>
-                
-                <article class="card">
-                    <h3>Programação Web/Mobile</h3>
-                    <p>Projetos com React.js e Firebase.</p>
-                    <a href="disciplinas/ind053.html" class="btn">Ver projetos</a>
-                </article>
-                
-                <article class="card">
-                    <h3>Estruturas de Dados</h3>
-                    <p>Implementações de estruturas complexas em C.</p>
-                    <a href="disciplinas/ies008.html" class="btn">Ver códigos</a>
-                </article>
+        <section class="highlight-section">
+            <h2>Por que este portfólio?</h2>
+            <div class="highlight-grid">
+                <div class="highlight-item">
+                    <h3>Conhecimento Organizado</h3>
+                    <p>Um espaço centralizado para revisitar e compartilhar o conteúdo aprendido em cada disciplina, com resumos e links úteis.</p>
+                </div>
+                <div class="highlight-item">
+                    <h3>Projetos em Destaque</h3>
+                    <p>Apresentação clara dos meus projetos no GitHub, mostrando minhas habilidades práticas e minha evolução como desenvolvedor.</p>
+                </div>
+                <div class="highlight-item">
+                    <h3>Conexão Profissional</h3>
+                    <p>Facilita o contato e a visualização do meu perfil profissional e acadêmico para futuras oportunidades.</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Portfólio Acadêmico | Desenvolvido por [Seu Nome]</p>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2025 Felipe Pacheco Bianchini. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>

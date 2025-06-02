@@ -1,86 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programação Web/Mobile</title>
+    <title>[IND053] Técnicas Avançadas de Programação Web e Mobile - Meu Portfólio</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>[IND053] Programação Web/Mobile</h1>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../disciplinas.html">Disciplinas</a></li>
-                    <li><a href="../contato.html">Contato</a></li>
-                    <li><a href="https://github.com/zun666" target="_blank" class="github-btn">GitHub</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="nav-brand">Meu Portfólio</a>
+            <ul class="nav-list">
+                <li><a href="../disciplinas.html">Disciplinas</a></li>
+                <li><a href="../contato.html">Contato</a></li>
+                <li><a href="https://github.com/zun666" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section class="disciplina-detalhes">
-            <div class="disciplina-header">
-                <h2>Técnicas Avançadas de Programação Web e Mobile</h2>
-                <p class="professor">Professor: Marcelo Tadeu Boer</p>
-                <a href="https://github.com/zun666/web-mobile" target="_blank" class="btn github-btn">Repositório no GitHub</a>
+    <main class="main-content">
+        <section class="discipline-detail">
+            <h1>[IND053] Técnicas Avançadas de Programação Web e Mobile</h1>
+            <p class="professor-name">Professor: Marcelo Tadeu Boer</p>
+
+            <h2>Sobre a Matéria</h2>
+            <p>Esta disciplina explora o desenvolvimento de aplicações web e mobile modernas utilizando frameworks e bibliotecas de ponta. Focamos no React.js para a construção de interfaces de usuário dinâmicas e reativas, e na integração com serviços de backend como o Firebase do Google, capacitando a criação de aplicações completas e com persistência de dados tanto para navegadores quanto para dispositivos móveis.</p>
+
+            <h2>Tópicos Abordados</h2>
+            <div class="content-topic">
+                <h3>Biblioteca React.js</h3>
+                <p>Introdução à biblioteca React.js para construção de interfaces de usuário com base em componentes. Compreensão do Virtual DOM, JSX e o ciclo de vida dos componentes para criar aplicações web eficientes e reativas.</p>
+            </div>
+            <div class="content-topic">
+                <h3>Criação Projeto - Estilização</h3>
+                <p>Passos iniciais para configurar um projeto React, incluindo a estrutura de pastas e a estilização de componentes utilizando CSS, Styled Components ou outros métodos.</p>
+            </div>
+            <div class="content-topic">
+                <h3>Criando Aplicação com React JS e Firebase Google</h3>
+                <p>Desenvolvimento de uma aplicação completa integrando o front-end em React.js com o backend do Firebase do Google, utilizando serviços como Firestore (banco de dados NoSQL), Authentication e Storage.</p>
+            </div>
+            <div class="content-topic">
+                <h3>Atividade Tela Loja</h3>
+                <p>Implementação prática de uma tela de loja/e-commerce, aplicando os conceitos de componentes, gerenciamento de estado e interação com dados externos (como produtos de um banco de dados).</p>
             </div>
 
-            <div class="conteudo-disciplina">
-                <article class="topico">
-                    <h3>Conteúdo Programático</h3>
-                    <ul class="conteudo-lista">
-                        <li>Biblioteca React.js</li>
-                        <li>Criação de projetos e estilização</li>
-                        <li>Criando aplicação com React.js e Firebase</li>
-                        <li>Atividade: Tela de loja virtual</li>
-                        <li>Componentes React</li>
-                        <li>Estado e props</li>
-                        <li>React Hooks</li>
-                        <li>Roteamento com React Router</li>
-                    </ul>
-                </article>
+            <h2>Curiosidades</h2>
+            <ul class="curiosity-list">
+                <li>React.js foi criado pelo Facebook e é usado por empresas como Netflix, Airbnb e Instagram, demonstrando sua escalabilidade e poder.</li>
+                <li>Firebase é uma plataforma serverless do Google que oferece diversos serviços de backend (autenticação, banco de dados, hospedagem) que facilitam o desenvolvimento full-stack.</li>
+                <li>O conceito de "componentização" em React permite a reutilização de partes da interface, agilizando o desenvolvimento e tornando o código mais organizado.</li>
+            </ul>
 
-                <article class="topico">
-                    <h3>Projetos Desenvolvidos</h3>
-                    <div class="projeto">
-                        <h4>Loja Virtual</h4>
-                        <p>Aplicação completa de e-commerce com React, Firebase e sistema de autenticação.</p>
-                        <a href="#" class="btn">Ver projeto</a>
-                    </div>
-                    
-                    <div class="projeto">
-                        <h4>App de Tarefas</h4>
-                        <p>Aplicativo mobile de lista de tarefas com sincronização em tempo real via Firebase.</p>
-                        <a href="#" class="btn">Ver projeto</a>
-                    </div>
-                </article>
-
-                <article class="topico">
-                    <h3>Curiosidades</h3>
-                    <div class="curiosidade">
-                        <p>React foi criado pelo Facebook em 2013 e hoje é uma das bibliotecas JavaScript mais populares do mundo.</p>
-                    </div>
-                    <div class="curiosidade">
-                        <p>Firebase do Google permite desenvolver aplicações completas sem necessidade de backend próprio.</p>
-                    </div>
-                </article>
-
-                <article class="topico">
-                    <h3>Links Úteis</h3>
-                    <ul class="links-uteis">
-                        <li><a href="https://reactjs.org/docs/getting-started.html" target="_blank">Documentação React</a></li>
-                        <li><a href="https://firebase.google.com/docs" target="_blank">Documentação Firebase</a></li>
-                        <li><a href="https://reactnative.dev/" target="_blank">React Native</a></li>
-                    </ul>
-                </article>
-            </div>
+            <h2>Links Úteis</h2>
+            <ul class="useful-links">
+                <li><a href="https://react.dev/learn" target="_blank">Documentação Oficial do React.js (Aprenda React)</a></li>
+                <li><a href="https://firebase.google.com/docs" target="_blank">Documentação Oficial do Firebase</a></li>
+                <li><a href="https://roadmap.sh/frontend" target="_blank">Frontend Developer Roadmap (inclui React)</a></li>
+            </ul>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Portfólio Acadêmico | Desenvolvido por [Seu Nome]</
+    <footer class="footer">
+        <p>&copy; 2025 Felipe Pacheco Bianchini. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

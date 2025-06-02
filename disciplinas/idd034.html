@@ -1,89 +1,79 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Banco de Dados</title>
+    <title>[IDD034] Técnicas Avançadas de Banco de Dados - Meu Portfólio</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>[IDD034] Banco de Dados</h1>
-            <nav>
-                <ul>
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../disciplinas.html">Disciplinas</a></li>
-                    <li><a href="../contato.html">Contato</a></li>
-                    <li><a href="https://github.com/zun666" target="_blank" class="github-btn">GitHub</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="header">
+        <nav class="navbar">
+            <a href="../index.html" class="nav-brand">Meu Portfólio</a>
+            <ul class="nav-list">
+                <li><a href="../disciplinas.html">Disciplinas</a></li>
+                <li><a href="../contato.html">Contato</a></li>
+                <li><a href="https://github.com/zun666" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section class="disciplina-detalhes">
-            <div class="disciplina-header">
-                <h2>Técnicas Avançadas de Banco de Dados Relacional e Não Relacional</h2>
-                <p class="professor">Professor: Alexandre Aparecido Bernardes</p>
-                <a href="https://github.com/zun666/banco-dados" target="_blank" class="btn github-btn">Repositório no GitHub</a>
+    <main class="main-content">
+        <section class="discipline-detail">
+            <h1>[IDD034] Técnicas Avançadas de Banco de Dados Relacional e Não Relacional</h1>
+            <p class="professor-name">Professor: Alexandre Aparecido Bernardes</p>
+
+            <h2>Sobre a Matéria</h2>
+            <p>Esta disciplina aprofunda os conhecimentos em sistemas de gerenciamento de banco de dados, explorando tanto as nuances dos bancos de dados relacionais avançados quanto a crescente importância dos bancos de dados não relacionais (NoSQL). Abordamos técnicas de otimização de consultas, manipulação de dados complexa e a escolha da tecnologia de banco de dados mais adequada para diferentes cenários, preparando para desafios do mundo real na persistência e gestão de informações.</p>
+
+            <h2>Tópicos Abordados</h2>
+            <div class="content-topic">
+                <h3>Apresentação SSMS e Revisão Comando DDL</h3>
+                <p>Exploração do SQL Server Management Studio (SSMS) como ferramenta principal para administração de bancos de dados SQL Server. Revisão e aprofundamento dos comandos DDL (Data Definition Language) para criação, alteração e exclusão de estruturas de banco de dados como tabelas, índices e esquemas.</p>
+            </div>
+            <div class="content-topic">
+                <h3>Tipo de Junções e Tabelas</h3>
+                <p>Estudo detalhado dos diferentes tipos de JOINs (INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, SELF JOIN) para combinar dados de múltiplas tabelas, compreendendo suas aplicações e resultados.</p>
+            </div>
+            <div class="content-topic">
+                <h3>Subconsultas e Views</h3>
+                <p>Análise de subconsultas (subqueries) para realizar consultas complexas que dependem do resultado de outras consultas. Criação e utilização de Views para simplificar a visualização de dados, encapsular lógica complexa e controlar o acesso a informações.</p>
+            </div>
+            <div class="content-topic">
+                <h3>Views Avançadas</h3>
+                <p>Aprofundamento em conceitos de Views, incluindo Views atualizáveis, com schema binding e particionadas, entendendo como elas podem ser utilizadas para otimização e segurança em cenários mais complexos.</p>
+            </div>
+            <div class="content-topic">
+                <h3>Stored Procedure</h3>
+                <p>Desenvolvimento e utilização de Stored Procedures (procedimentos armazenados) para encapsular blocos de código SQL que podem ser reutilizados, melhorando a performance, segurança e manutenção do banco de dados.</p>
+            </div>
+            <div class="content-topic">
+                <h3>Functions</h3>
+                <p>Criação e aplicação de Functions (funções) no SQL, distinguindo-as das Stored Procedures e utilizando-as para realizar cálculos ou retornar valores escalares ou em forma de tabela dentro de consultas.</p>
+            </div>
+            <div class="content-topic">
+                <h3>DCL</h3>
+                <p>Estudo da DCL (Data Control Language), com foco em comandos GRANT e REVOKE para gerenciar permissões de acesso e segurança de dados no banco de dados, controlando quais usuários podem realizar quais operações.</p>
             </div>
 
-            <div class="conteudo-disciplina">
-                <article class="topico">
-                    <h3>Conteúdo Programático</h3>
-                    <ul class="conteudo-lista">
-                        <li>Apresentação SSMS e revisão de comandos DDL</li>
-                        <li>Tipos de junções e tabelas</li>
-                        <li>Subconsultas e views</li>
-                        <li>Views avançadas</li>
-                        <li>Stored procedures</li>
-                        <li>Functions</li>
-                        <li>Controle de acesso (DCL)</li>
-                    </ul>
-                </article>
+            <h2>Curiosidades</h2>
+            <ul class="curiosity-list">
+                <li>Bancos de dados NoSQL (Not Only SQL) ganharam destaque com o crescimento de big data e aplicações web escaláveis, sendo flexíveis para dados não estruturados.</li>
+                <li>Stored Procedures e Functions podem reduzir o tráfego de rede e melhorar a performance, pois o código é executado diretamente no servidor do banco de dados.</li>
+                <li>A segurança em bancos de dados é crucial; o DCL é a base para proteger informações sensíveis e garantir a integridade dos dados.</li>
+            </ul>
 
-                <article class="topico">
-                    <h3>Projetos Desenvolvidos</h3>
-                    <div class="projeto">
-                        <h4>Sistema de Biblioteca</h4>
-                        <p>Modelagem e implementação de um banco de dados para sistema de biblioteca com stored procedures e views complexas.</p>
-                        <a href="#" class="btn">Ver projeto</a>
-                    </div>
-                    
-                    <div class="projeto">
-                        <h4>Migração para NoSQL</h4>
-                        <p>Estudo de caso de migração de um sistema relacional para MongoDB.</p>
-                        <a href="#" class="btn">Ver estudo</a>
-                    </div>
-                </article>
-
-                <article class="topico">
-                    <h3>Curiosidades</h3>
-                    <div class="curiosidade">
-                        <p>O mercado de bancos de dados NoSQL cresceu mais de 50% nos últimos 5 anos, refletindo a demanda por soluções escaláveis.</p>
-                    </div>
-                    <div class="curiosidade">
-                        <p>Stored procedures podem melhorar a performance em até 40% para operações complexas e repetitivas.</p>
-                    </div>
-                </article>
-
-                <article class="topico">
-                    <h3>Links Úteis</h3>
-                    <ul class="links-uteis">
-                        <li><a href="https://www.mongodb.com/" target="_blank">Documentação MongoDB</a></li>
-                        <li><a href="https://dev.mysql.com/doc/" target="_blank">Documentação MySQL</a></li>
-                        <li><a href="https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms" target="_blank">Download SSMS</a></li>
-                    </ul>
-                </article>
-            </div>
+            <h2>Links Úteis</h2>
+            <ul class="useful-links">
+                <li><a href="https://docs.microsoft.com/pt-br/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16" target="_blank">Download SQL Server Management Studio (SSMS)</a></li>
+                <li><a href="https://www.w3schools.com/sql/" target="_blank">Tutorial Completo de SQL (W3Schools)</a></li>
+                <li><a href="https://www.mongodb.com/nosql-explained" target="_blank">O que é NoSQL? (MongoDB)</a></li>
+            </ul>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Portfólio Acadêmico | Desenvolvido por [Seu Nome]</p>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2025 Felipe Pacheco Bianchini. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>

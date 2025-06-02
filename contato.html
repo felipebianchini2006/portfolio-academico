@@ -1,90 +1,50 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
+    <title>Contato - Meu Portfólio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>Entre em Contato</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="disciplinas.html">Disciplinas</a></li>
-                    <li><a href="contato.html" class="active">Contato</a></li>
-                    <li><a href="https://github.com/zun666" target="_blank" class="github-btn">GitHub</a></li>
-                </ul>
-            </nav>
-        </div>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="nav-brand">Meu Portfólio</a>
+            <ul class="nav-list">
+                <li><a href="disciplinas.html">Disciplinas</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="https://github.com/zun666" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section class="contato">
-            <div class="contato-form">
-                <h2>Envie uma mensagem</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" required>
+    <main class="main-content">
+        <section class="contact-section">
+            <h1>Entre em Contato</h1>
+            <div class="contact-profile">
+                <div class="profile-photo-container">
+                    <img src="assets/images/profile-placeholder.jpg" alt="Sua Foto de Perfil" class="profile-photo">
+                    <p class="photo-tip">Substitua esta imagem por uma sua!</p>
+                </div>
+                <div class="personal-info">
+                    <h2>Felipe Pacheco Bianchini</h2>
+                    <p>Olá! Fico feliz que você tenha chegado até aqui. Se tiver alguma dúvida, sugestão, ou quiser discutir sobre tecnologia e oportunidades, sinta-se à vontade para me contatar pelos canais abaixo:</p>
+                    <ul>
+                        <li><strong>E-mail:</strong> <a href="mailto:seu.email@exemplo.com">felipebianchini02@gmail.com</a></li>
+                        <li><strong>Telefone:</strong>17996638804</li>
+                        <li><strong>Localização:</strong>Jales SP</li>
+                    </ul>
+                    <div class="social-links">
+                        <a href="https://br.linkedin.com/in/felipe-pacheco-bianchini-699b25331" target="_blank" class="social-btn linkedin-btn">LinkedIn</a>
+                        <a href="https://github.com/zun666" target="_blank" class="social-btn github-btn">GitHub</a>
                     </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="assunto">Assunto:</label>
-                        <select id="assunto" name="assunto">
-                            <option value="duvida">Dúvida</option>
-                            <option value="projeto">Projeto</option>
-                            <option value="trabalho">Oportunidade de Trabalho</option>
-                            <option value="outro">Outro</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="mensagem">Mensagem:</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn">Enviar Mensagem</button>
-                </form>
+                </div>
             </div>
-
-            <div class="redes-sociais">
-                <h2>Minhas Redes</h2>
-                <ul>
-                    <li>
-                        <a href="https://github.com/zun666" target="_blank">
-                            <img src="assets/images/github-icon.png" alt="GitHub">
-                            GitHub.com/zun666
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <img src="assets/images/linkedin-icon.png" alt="LinkedIn">
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" target="_blank">
-                            <img src="assets/images/email-icon.png" alt="Email">
-                            seuemail@exemplo.com
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
+            </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Portfólio Acadêmico | Desenvolvido por [Seu Nome]</p>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2025 Felipe Pacheco Bianchini. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
