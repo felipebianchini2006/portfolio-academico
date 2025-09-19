@@ -1,0 +1,111 @@
+﻿<section class="subjects">
+  <aside class="subjects-menu">
+    <h1>Disciplinas</h1>
+    <p>Selecione uma disciplina para visualizar os conte&uacute;dos estudados, atividades desenvolvidas e materiais de apoio.</p>
+
+    <div class="menu-list">
+      <mat-nav-list>
+        <button
+          mat-list-item
+          *ngFor="let subject of subjects; trackBy: trackById"
+          type="button"
+          (click)="selectSubject(subject)"
+          [ngClass]="{ active: subject.id === selected.id }"
+        >
+          <mat-icon matListIcon fontIcon="menu_book"></mat-icon>
+          <div class="menu-item-text">
+            <span class="menu-title">{{ subject.code }} {{ subject.name }}</span>
+            <span class="menu-subtitle">{{ subject.teacher }}</span>
+          </div>
+        </button>
+      </mat-nav-list>
+    </div>
+  </aside>
+
+  <article class="subject-detail" *ngIf="selected as subject" [style.--accent-color]="subject.accentColor">
+    <mat-card class="subject-card" appearance="outlined">
+      <mat-card-header>
+        <mat-card-title>{{ subject.code }} {{ subject.name }}</mat-card-title>
+        <mat-card-subtitle>{{ subject.teacher }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="subject-short">{{ subject.shortDescription }}</p>
+        <p class="subject-about">{{ subject.about }}</p>
+
+        <div class="subject-tags" *ngIf="subject.tags?.length">
+          <mat-chip-row>
+            <mat-chip *ngFor="let tag of subject.tags" color="primary" class="tag-chip">{{ tag }}</mat-chip>
+          </mat-chip-row>
+        </div>
+
+        <section class="subject-section">
+          <header>
+            <h2>Conte&uacute;dos abordados em aula</h2>
+            <mat-divider></mat-divider>
+          </header>
+          <div class="topic-grid">
+            <div class="topic-card" *ngFor="let topic of subject.topics">
+              <h3>{{ topic.title }}</h3>
+              <p>{{ topic.description }}</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="subject-section">
+          <header>
+            <h2>Atividades e projetos</h2>
+            <mat-divider></mat-divider>
+          </header>
+          <div class="activity-grid">
+            <div class="activity-card" *ngFor="let activity of subject.activities">
+              <div class="activity-head">
+                <h3>{{ activity.title }}</h3>
+                <span class="activity-badge" *ngIf="activity.badge">{{ activity.badge }}</span>
+              </div>
+              <p>{{ activity.description }}</p>
+              <a
+                *ngIf="activity.link"
+                mat-stroked-button
+                color="primary"
+                [href]="activity.link"
+                target="_blank"
+                rel="noopener"
+              >
+                Acessar material
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="subject-section">
+          <header>
+            <h2>Curiosidades</h2>
+            <mat-divider></mat-divider>
+          </header>
+          <ul class="curiosity-list">
+            <li *ngFor="let curiosity of subject.curiosities">{{ curiosity }}</li>
+          </ul>
+        </section>
+
+        <section class="subject-section" *ngIf="subject.resources.length">
+          <header>
+            <h2>Materiais de refer&ecirc;ncia</h2>
+            <mat-divider></mat-divider>
+          </header>
+          <div class="resource-links">
+            <a
+              *ngFor="let resource of subject.resources"
+              mat-stroked-button
+              color="accent"
+              [href]="resource.url"
+              target="_blank"
+              rel="noopener"
+            >
+              {{ resource.label }}
+            </a>
+          </div>
+        </section>
+      </mat-card-content>
+    </mat-card>
+  </article>
+</section>

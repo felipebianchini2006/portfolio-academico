@@ -1,0 +1,71 @@
+﻿<mat-toolbar color="primary" class="app-toolbar">
+  <a class="brand" routerLink="" aria-label="P&aacute;gina inicial">
+    <mat-icon fontIcon="school"></mat-icon>
+    <span>Portf&oacute;lio Acad&ecirc;mico</span>
+  </a>
+  <span class="spacer"></span>
+  <nav class="desktop-nav">
+    <a
+      *ngFor="let item of navItems"
+      mat-button
+      [routerLink]="item.path"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="item.exact ? { exact: true } : { exact: false }"
+    >
+      {{ item.label }}
+    </a>
+    <a mat-stroked-button color="accent" [href]="githubUrl" target="_blank" rel="noopener">
+      GitHub
+    </a>
+  </nav>
+  <button
+    mat-icon-button
+    class="mobile-menu-button"
+    [matMenuTriggerFor]="mobileMenu"
+    aria-label="Abrir menu de navega&ccedil;&atilde;o"
+  >
+    <mat-icon fontIcon="menu"></mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-menu #mobileMenu="matMenu">
+  <ng-container *ngFor="let item of navItems">
+    <button
+      mat-menu-item
+      [routerLink]="item.path"
+      routerLinkActive="active-link"
+      [routerLinkActiveOptions]="item.exact ? { exact: true } : { exact: false }"
+    >
+      {{ item.label }}
+    </button>
+  </ng-container>
+  <mat-divider></mat-divider>
+  <a mat-menu-item [href]="githubUrl" target="_blank" rel="noopener">
+    <mat-icon fontIcon="code"></mat-icon>
+    <span>GitHub</span>
+  </a>
+</mat-menu>
+
+<main class="app-main">
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="app-footer">
+  <div class="footer-content">
+    <div>
+      <h2>Felipe Pacheco Bianchini</h2>
+      <p>
+        Estudante de An&aacute;lise e Desenvolvimento de Sistemas na Fatec Jales, apaixonado por transformar
+        ideias em produtos digitais acess&iacute;veis e eficientes.
+      </p>
+    </div>
+    <div class="footer-links">
+      <h3>Conecte-se</h3>
+      <a href="mailto:felipebianchini02&#64;gmail.com">felipebianchini02&#64;gmail.com</a>
+      <a href="https://br.linkedin.com/in/felipe-pacheco-bianchini-699b25331" target="_blank" rel="noopener">LinkedIn</a>
+      <a [href]="githubUrl" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <p class="footer-copy">&copy; {{ currentYear }} Felipe Pacheco Bianchini. Todos os direitos reservados.</p>
+</footer>

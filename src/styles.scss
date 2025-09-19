@@ -1,0 +1,44 @@
+﻿@use '@angular/material' as mat;
+
+@include mat.core();
+
+$portfolio-theme: mat.define-theme();
+
+:root {
+  @include mat.all-component-themes($portfolio-theme);
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Roboto', 'Helvetica Neue', sans-serif;
+  background-color: #f4f7fb;
+  color: #1e2f4a;
+}
+
+a {
+  color: inherit;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+main {
+  display: block;
+}
+

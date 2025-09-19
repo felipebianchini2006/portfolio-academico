@@ -1,0 +1,102 @@
+﻿<section class="hero">
+  <div class="hero-content">
+    <span class="hero-pill">Fatec Jales &bull; ADS</span>
+    <h1>Portf&oacute;lio acad&ecirc;mico com experi&ecirc;ncias reais e projetos completos</h1>
+    <p>
+      Felipe Pacheco Bianchini registra nesta plataforma a evolu&ccedil;&atilde;o em An&aacute;lise e Desenvolvimento de Sistemas,
+      explorando desafios t&eacute;cnicos, metodologias &aacute;geis e solu&ccedil;&otilde;es focadas em pessoas.
+    </p>
+    <div class="hero-actions">
+      <a mat-flat-button color="primary" routerLink="/disciplinas">Explorar disciplinas</a>
+      <a mat-stroked-button color="accent" href="https://github.com/felipebianchini2006" target="_blank" rel="noopener">
+        Ver projetos no GitHub
+      </a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <strong>11</strong>
+        <span>Disciplinas acompanhadas</span>
+      </div>
+      <mat-divider vertical></mat-divider>
+      <div>
+        <strong>35+</strong>
+        <span>Atividades documentadas</span>
+      </div>
+      <mat-divider vertical></mat-divider>
+      <div>
+        <strong>100%</strong>
+        <span>Foco em acessibilidade</span>
+      </div>
+    </div>
+  </div>
+  <mat-card class="hero-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="hero-avatar">
+        <img src="assets/images/foto.jpg" alt="Foto de Felipe Pacheco Bianchini" />
+      </div>
+      <mat-card-title>Felipe Pacheco Bianchini</mat-card-title>
+      <mat-card-subtitle>An&aacute;lise e Desenvolvimento de Sistemas</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        Apaixonado por desenvolvimento web, banco de dados e cria&ccedil;&atilde;o de experi&ecirc;ncias digitais acess&iacute;veis. Este espa&ccedil;o re&uacute;ne
+        minha jornada, materiais de apoio e reflex&otilde;es sobre as entregas produzidas durante o curso.
+      </p>
+      <div class="hero-tags">
+        <mat-chip-row>
+          <mat-chip>Angular</mat-chip>
+          <mat-chip>.NET</mat-chip>
+          <mat-chip>UX Research</mat-chip>
+          <mat-chip>Supabase</mat-chip>
+        </mat-chip-row>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</section>
+
+<section class="highlights">
+  <h2>Como este portf&oacute;lio ajuda na jornada</h2>
+  <div class="highlight-grid">
+    <mat-card *ngFor="let item of highlights" appearance="outlined">
+      <mat-card-header>
+        <mat-icon mat-card-avatar fontIcon="{{ item.icon }}"></mat-icon>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ item.description }}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>
+
+<section class="journey">
+  <h2>Projetos e experi&ecirc;ncias que se destacam</h2>
+  <p class="journey-description">
+    Cada disciplina adiciona uma camada de conhecimento. Estes s&atilde;o alguns marcos que conectam teoria, pr&aacute;tica e trabalho em equipe.
+  </p>
+  <div class="journey-grid">
+    <mat-card *ngFor="let item of journey" appearance="outlined">
+      <mat-card-header>
+        <mat-chip-row>
+          <mat-chip color="primary" class="highlighted-chip">{{ item.context }}</mat-chip>
+        </mat-chip-row>
+        <mat-card-title>{{ item.title }}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ item.description }}</p>
+        <div class="journey-stack" *ngIf="item.stack">{{ item.stack }}</div>
+        <a
+          *ngIf="item.link"
+          mat-stroked-button
+          color="primary"
+          [href]="item.link"
+          target="_blank"
+          rel="noopener"
+        >
+          <mat-icon fontIcon="open_in_new"></mat-icon>
+          Ver reposit&oacute;rio
+        </a>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</section>

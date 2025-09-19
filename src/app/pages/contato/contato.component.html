@@ -1,0 +1,45 @@
+﻿<section class="contact">
+  <div class="contact-intro">
+    <span class="lead">Vamos conversar?</span>
+    <h1>Portas abertas para conex&otilde;es e novos desafios</h1>
+    <p>
+      Adoro compartilhar experi&ecirc;ncias sobre desenvolvimento web, banco de dados, design e metodologias &aacute;geis. Use os canais abaixo
+      para entrar em contato e vamos construir algo juntos.
+    </p>
+  </div>
+
+  <mat-card class="contact-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="avatar">
+        <img src="assets/images/foto.jpg" alt="Foto de Felipe Pacheco Bianchini" />
+      </div>
+      <mat-card-title>Felipe Pacheco Bianchini</mat-card-title>
+      <mat-card-subtitle>An&aacute;lise e Desenvolvimento de Sistemas &bull; Fatec Jales</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <ul class="channel-list">
+        <li *ngFor="let channel of channels">
+          <mat-icon fontIcon="{{ channel.icon }}"></mat-icon>
+          <div>
+            <span class="label">{{ channel.label }}</span>
+            <a *ngIf="channel.link; else plain" [href]="channel.link">{{ channel.value }}</a>
+            <ng-template #plain>{{ channel.value }}</ng-template>
+          </div>
+        </li>
+      </ul>
+
+      <mat-divider></mat-divider>
+
+      <div class="social-section">
+        <h2>Redes e projetos</h2>
+        <div class="social-links">
+          <a mat-flat-button color="primary" *ngFor="let item of social" [href]="item.url" target="_blank" rel="noopener">
+            <mat-icon fontIcon="{{ item.icon }}"></mat-icon>
+            {{ item.label }}
+          </a>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</section>
